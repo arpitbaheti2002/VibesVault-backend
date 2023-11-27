@@ -108,7 +108,7 @@ router.delete('/delete-user/:userId', async (req, res, next) => {
 const clientId = '299a2d2ce86849dda9ba9ec06e5d07c5'; 
 const clientSecret = 'f312c0b1499f4a1ab98d5feaf65ebb6f'; 
 
-const redirectUri = 'http://localhost:3000/dashboard'; // Replace with your redirect URI
+const redirectUri = 'https://vibes-vault.vercel.app/dashboard'; 
 
 router.get('/spotify-login', (req, res) => {
   const scope = 'user-read-private user-read-email'; // Specify the required scopes
