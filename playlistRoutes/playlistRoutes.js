@@ -3,7 +3,7 @@ const router = express.Router();
 const UserPlaylist = require("../schema/UserPlaylists");
 const PlaylistDetails = require("../schema/PlaylistDetails");
 
-PlaylistDetails.collection.createIndex({ songId: 1 }, { unique: true });
+PlaylistDetails.collection.createIndex({ songId: 1 }, { unique: true, bufferTimeoutMS: 30000 });
 
 router.post("/addPlaylist", async (req, res) => {
   try {
